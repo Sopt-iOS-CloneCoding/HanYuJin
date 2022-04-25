@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="LD8-KW-D6T" kind="relationship" relationship="viewControllers" id="onk-pM-Hwc"/>
@@ -27,40 +29,40 @@
             </objects>
             <point key="canvasLocation" x="-578" y="-35"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--WorldClock-->
         <scene sceneID="ETa-uJ-5Yq">
             <objects>
-                <viewControllerPlaceholder id="LD8-KW-D6T" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="WorldClock" id="LD8-KW-D6T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="W0c-nz-B0T"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X00-mI-lkS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1231" y="400"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Alarm-->
         <scene sceneID="EVn-8x-pEi">
             <objects>
-                <viewControllerPlaceholder id="pn1-Jy-9hu" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Alarm" id="pn1-Jy-9hu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="DcC-R9-oVd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOy-nk-ykg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-846" y="400"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--StopWatch-->
         <scene sceneID="1g9-eK-Q4V">
             <objects>
-                <viewControllerPlaceholder id="uUj-u3-Mq4" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="StopWatch" id="uUj-u3-Mq4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="L9b-O4-dyS"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RvJ-ZU-tIm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-386" y="400"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Timer-->
         <scene sceneID="ShD-JD-Sml">
             <objects>
-                <viewControllerPlaceholder id="sTE-QD-hdU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Timer" id="sTE-QD-hdU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="AXC-ef-7c4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU3-jh-i9S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -68,4 +70,9 @@
             <point key="canvasLocation" x="76" y="400"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

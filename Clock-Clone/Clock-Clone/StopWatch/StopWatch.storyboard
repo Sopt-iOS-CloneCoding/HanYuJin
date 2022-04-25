@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,22 +8,79 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--스톱워치-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StopWatchViewController" id="Y6W-OH-hqX" customClass="StopWatchViewController" customModule="Clock_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-2e-K6c">
+                                <rect key="frame" x="77" y="283" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="bcY-hV-8MA"/>
+                                    <constraint firstAttribute="height" constant="80" id="o1P-vT-QKu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="랩"/>
+                                <connections>
+                                    <action selector="lapResetTimerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uSL-ix-evg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcS-hH-3XQ" userLabel="Main Timer Label">
+                                <rect key="frame" x="44" y="150" width="326" height="96"/>
+                                <accessibility key="accessibilityConfiguration" label="00:00:00"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t4D-7y-oIx">
+                                <rect key="frame" x="0.0" y="365" width="414" height="448"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5A-Jq-muR">
+                                <rect key="frame" x="257" y="283" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="LTQ-l3-5fD"/>
+                                    <constraint firstAttribute="height" constant="80" id="qfS-w8-1PU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                <connections>
+                                    <action selector="playPauseTimerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9dO-3E-kvh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t4D-7y-oIx" firstAttribute="centerX" secondItem="bcS-hH-3XQ" secondAttribute="centerX" id="0KR-hs-ekP"/>
+                            <constraint firstItem="Vse-2e-K6c" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-125" id="1qF-7s-HbJ"/>
+                            <constraint firstItem="Y5A-Jq-muR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="90" id="Buw-fQ-czf"/>
+                            <constraint firstItem="t4D-7y-oIx" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="E1I-VC-u4w"/>
+                            <constraint firstItem="Vse-2e-K6c" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-90" id="FNn-JR-3yf"/>
+                            <constraint firstItem="t4D-7y-oIx" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="L9k-Jl-8tk"/>
+                            <constraint firstItem="t4D-7y-oIx" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="Vtc-Eh-zG7"/>
+                            <constraint firstItem="t4D-7y-oIx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="W6Q-sI-QEV"/>
+                            <constraint firstItem="bcS-hH-3XQ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-250" id="Z2V-Lv-gMu"/>
+                            <constraint firstItem="bcS-hH-3XQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d9n-IJ-8e5"/>
+                            <constraint firstItem="Y5A-Jq-muR" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-125" id="xtx-li-cHt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t4D-7y-oIx" secondAttribute="trailing" id="zac-8a-3Ew"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="stopwatch.fill" catalog="system" id="5hu-fn-bgM"/>
+                    <tabBarItem key="tabBarItem" title="스톱워치" image="stopwatch.fill" catalog="system" id="5hu-fn-bgM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="labTimerLabel" destination="bcS-hH-3XQ" id="LhJ-G9-9xZ"/>
+                        <outlet property="lapResetButton" destination="Vse-2e-K6c" id="uEA-dQ-nzN"/>
+                        <outlet property="lapsTableView" destination="t4D-7y-oIx" id="1dt-y5-jXn"/>
+                        <outlet property="playPauseButton" destination="Y5A-Jq-muR" id="qhO-da-c5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="104"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A21ACA62816801000DB8A27 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A21ACA52816801000DB8A27 /* Stopwatch.swift */; };
+		1A21ACA9281687B800DB8A27 /* StopwatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A21ACA7281687B800DB8A27 /* StopwatchTableViewCell.swift */; };
+		1A21ACAA281687B800DB8A27 /* StopwatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A21ACA8281687B800DB8A27 /* StopwatchTableViewCell.xib */; };
 		1A3D51E8280D71F100407C6F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D51E7280D71F100407C6F /* TabBarViewController.swift */; };
 		1A611450280D56C700AEEC3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A61144F280D56C700AEEC3C /* AppDelegate.swift */; };
 		1A611452280D56C700AEEC3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A611451280D56C700AEEC3C /* SceneDelegate.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A21ACA52816801000DB8A27 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		1A21ACA7281687B800DB8A27 /* StopwatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTableViewCell.swift; sourceTree = "<group>"; };
+		1A21ACA8281687B800DB8A27 /* StopwatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopwatchTableViewCell.xib; sourceTree = "<group>"; };
 		1A3D51E7280D71F100407C6F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1A61144C280D56C700AEEC3C /* Clock-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A61144F280D56C700AEEC3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 			children = (
 				1AE50830280D72C600B82143 /* StopWatch.storyboard */,
 				1AE50838280D730A00B82143 /* StopWatchViewController.swift */,
+				1A21ACA52816801000DB8A27 /* Stopwatch.swift */,
+				1A21ACA7281687B800DB8A27 /* StopwatchTableViewCell.swift */,
+				1A21ACA8281687B800DB8A27 /* StopwatchTableViewCell.xib */,
 			);
 			path = StopWatch;
 			sourceTree = "<group>";
@@ -197,6 +206,7 @@
 			files = (
 				1AE50833280D72D300B82143 /* WorldClock.storyboard in Resources */,
 				1AE5082F280D72B900B82143 /* Alarm.storyboard in Resources */,
+				1A21ACAA281687B800DB8A27 /* StopwatchTableViewCell.xib in Resources */,
 				1AE5082D280D726E00B82143 /* Timer.storyboard in Resources */,
 				1A611465280D5EB400AEEC3C /* TabBar.storyboard in Resources */,
 				1A61145C280D56C800AEEC3C /* LaunchScreen.storyboard in Resources */,
@@ -214,9 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3D51E8280D71F100407C6F /* TabBarViewController.swift in Sources */,
+				1A21ACA9281687B800DB8A27 /* StopwatchTableViewCell.swift in Sources */,
 				1A611454280D56C700AEEC3C /* ViewController.swift in Sources */,
 				1AE50837280D730000B82143 /* AlarmViewController.swift in Sources */,
 				1A611450280D56C700AEEC3C /* AppDelegate.swift in Sources */,
+				1A21ACA62816801000DB8A27 /* Stopwatch.swift in Sources */,
 				1AE5083B280D731200B82143 /* TimerViewController.swift in Sources */,
 				1A611452280D56C700AEEC3C /* SceneDelegate.swift in Sources */,
 				1AE50839280D730A00B82143 /* StopWatchViewController.swift in Sources */,
