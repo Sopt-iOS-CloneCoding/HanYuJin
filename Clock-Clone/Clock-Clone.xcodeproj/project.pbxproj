@@ -18,6 +18,10 @@
 		1A611459280D56C800AEEC3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A611458280D56C800AEEC3C /* Assets.xcassets */; };
 		1A61145C280D56C800AEEC3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A61145A280D56C800AEEC3C /* LaunchScreen.storyboard */; };
 		1A611465280D5EB400AEEC3C /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A611464280D5EB400AEEC3C /* TabBar.storyboard */; };
+		1A98DF3C2816B5C900AB4E9B /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A98DF3A2816B5C900AB4E9B /* AlarmTableViewCell.swift */; };
+		1A98DF3D2816B5C900AB4E9B /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A98DF3B2816B5C900AB4E9B /* AlarmTableViewCell.xib */; };
+		1AB2B316281FB078001DB0D9 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB2B315281FB078001DB0D9 /* Color.xcassets */; };
+		1AB2B31A281FB27F001DB0D9 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2B319281FB27F001DB0D9 /* UIColor+.swift */; };
 		1AE5082D280D726E00B82143 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5082C280D726E00B82143 /* Timer.storyboard */; };
 		1AE5082F280D72B900B82143 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5082E280D72B900B82143 /* Alarm.storyboard */; };
 		1AE50831280D72C600B82143 /* StopWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE50830280D72C600B82143 /* StopWatch.storyboard */; };
@@ -42,6 +46,10 @@
 		1A61145B280D56C800AEEC3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A61145D280D56C800AEEC3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A611464280D5EB400AEEC3C /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		1A98DF3A2816B5C900AB4E9B /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
+		1A98DF3B2816B5C900AB4E9B /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
+		1AB2B315281FB078001DB0D9 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		1AB2B319281FB27F001DB0D9 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		1AE5082C280D726E00B82143 /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		1AE5082E280D72B900B82143 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
 		1AE50830280D72C600B82143 /* StopWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StopWatch.storyboard; sourceTree = "<group>"; };
@@ -82,16 +90,13 @@
 		1A61144E280D56C700AEEC3C /* Clock-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				1AE5082B280D726200B82143 /* Timer */,
-				1AE5082A280D725900B82143 /* StopWatch */,
-				1AE50829280D725100B82143 /* Alarm */,
-				1AE50828280D724900B82143 /* WorldClock */,
-				1A611463280D5E6900AEEC3C /* TabBar */,
+				1AB2B31D281FB2DC001DB0D9 /* Source */,
+				1AB2B31B281FB2B6001DB0D9 /* Resource */,
+				1AB2B317281FB261001DB0D9 /* Global */,
 				1A61144F280D56C700AEEC3C /* AppDelegate.swift */,
 				1A611451280D56C700AEEC3C /* SceneDelegate.swift */,
 				1A611453280D56C700AEEC3C /* ViewController.swift */,
 				1A611455280D56C700AEEC3C /* Main.storyboard */,
-				1A611458280D56C800AEEC3C /* Assets.xcassets */,
 				1A61145A280D56C800AEEC3C /* LaunchScreen.storyboard */,
 				1A61145D280D56C800AEEC3C /* Info.plist */,
 			);
@@ -102,16 +107,195 @@
 			isa = PBXGroup;
 			children = (
 				1A611464280D5EB400AEEC3C /* TabBar.storyboard */,
-				1A3D51E7280D71F100407C6F /* TabBarViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1AB2B317281FB261001DB0D9 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B318281FB269001DB0D9 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		1AB2B318281FB269001DB0D9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B319281FB27F001DB0D9 /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1AB2B31B281FB2B6001DB0D9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B329281FB359001DB0D9 /* Storyboard */,
+				1AB2B31C281FB2C8001DB0D9 /* Asset */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1AB2B31C281FB2C8001DB0D9 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				1A611458280D56C800AEEC3C /* Assets.xcassets */,
+				1AB2B315281FB078001DB0D9 /* Color.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		1AB2B31D281FB2DC001DB0D9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B31E281FB2F0001DB0D9 /* Screen */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1AB2B31E281FB2F0001DB0D9 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B323281FB324001DB0D9 /* StopWatch */,
+				1AB2B322281FB31E001DB0D9 /* TabBar */,
+				1AB2B321281FB315001DB0D9 /* WorldClock */,
+				1AB2B320281FB30F001DB0D9 /* Alarm */,
+				1AB2B31F281FB309001DB0D9 /* Timer */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1AB2B31F281FB309001DB0D9 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B328281FB347001DB0D9 /* Controller */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		1AB2B320281FB30F001DB0D9 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B32D281FB3AB001DB0D9 /* View */,
+				1AB2B32C281FB3A5001DB0D9 /* Model */,
+				1AB2B327281FB342001DB0D9 /* Controller */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		1AB2B321281FB315001DB0D9 /* WorldClock */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B326281FB33D001DB0D9 /* Controller */,
+			);
+			path = WorldClock;
+			sourceTree = "<group>";
+		};
+		1AB2B322281FB31E001DB0D9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B325281FB337001DB0D9 /* Controller */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1AB2B323281FB324001DB0D9 /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				1AB2B32B281FB382001DB0D9 /* Model */,
+				1AB2B32A281FB37A001DB0D9 /* View */,
+				1AB2B324281FB32E001DB0D9 /* Controller */,
+			);
+			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		1AB2B324281FB32E001DB0D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AE50838280D730A00B82143 /* StopWatchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AB2B325281FB337001DB0D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A3D51E7280D71F100407C6F /* TabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AB2B326281FB33D001DB0D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AE50834280D72F100B82143 /* WorldClockViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AB2B327281FB342001DB0D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AE50836280D730000B82143 /* AlarmViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AB2B328281FB347001DB0D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AE5083A280D731200B82143 /* TimerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AB2B329281FB359001DB0D9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1AE50828280D724900B82143 /* WorldClock */,
+				1AE5082A280D725900B82143 /* StopWatch */,
+				1A611463280D5E6900AEEC3C /* TabBar */,
+				1AE50829280D725100B82143 /* Alarm */,
+				1AE5082B280D726200B82143 /* Timer */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1AB2B32A281FB37A001DB0D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A21ACA7281687B800DB8A27 /* StopwatchTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1AB2B32B281FB382001DB0D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A21ACA52816801000DB8A27 /* Stopwatch.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AB2B32C281FB3A5001DB0D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AB2B32D281FB3AB001DB0D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A98DF3A2816B5C900AB4E9B /* AlarmTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1AE50828280D724900B82143 /* WorldClock */ = {
 			isa = PBXGroup;
 			children = (
 				1AE50832280D72D300B82143 /* WorldClock.storyboard */,
-				1AE50834280D72F100B82143 /* WorldClockViewController.swift */,
 			);
 			path = WorldClock;
 			sourceTree = "<group>";
@@ -120,7 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				1AE5082E280D72B900B82143 /* Alarm.storyboard */,
-				1AE50836280D730000B82143 /* AlarmViewController.swift */,
+				1A98DF3B2816B5C900AB4E9B /* AlarmTableViewCell.xib */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -129,9 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE50830280D72C600B82143 /* StopWatch.storyboard */,
-				1AE50838280D730A00B82143 /* StopWatchViewController.swift */,
-				1A21ACA52816801000DB8A27 /* Stopwatch.swift */,
-				1A21ACA7281687B800DB8A27 /* StopwatchTableViewCell.swift */,
 				1A21ACA8281687B800DB8A27 /* StopwatchTableViewCell.xib */,
 			);
 			path = StopWatch;
@@ -141,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE5082C280D726E00B82143 /* Timer.storyboard */,
-				1AE5083A280D731200B82143 /* TimerViewController.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -207,8 +387,10 @@
 				1AE50833280D72D300B82143 /* WorldClock.storyboard in Resources */,
 				1AE5082F280D72B900B82143 /* Alarm.storyboard in Resources */,
 				1A21ACAA281687B800DB8A27 /* StopwatchTableViewCell.xib in Resources */,
+				1AB2B316281FB078001DB0D9 /* Color.xcassets in Resources */,
 				1AE5082D280D726E00B82143 /* Timer.storyboard in Resources */,
 				1A611465280D5EB400AEEC3C /* TabBar.storyboard in Resources */,
+				1A98DF3D2816B5C900AB4E9B /* AlarmTableViewCell.xib in Resources */,
 				1A61145C280D56C800AEEC3C /* LaunchScreen.storyboard in Resources */,
 				1A611459280D56C800AEEC3C /* Assets.xcassets in Resources */,
 				1A611457280D56C700AEEC3C /* Main.storyboard in Resources */,
@@ -228,8 +410,10 @@
 				1A611454280D56C700AEEC3C /* ViewController.swift in Sources */,
 				1AE50837280D730000B82143 /* AlarmViewController.swift in Sources */,
 				1A611450280D56C700AEEC3C /* AppDelegate.swift in Sources */,
+				1AB2B31A281FB27F001DB0D9 /* UIColor+.swift in Sources */,
 				1A21ACA62816801000DB8A27 /* Stopwatch.swift in Sources */,
 				1AE5083B280D731200B82143 /* TimerViewController.swift in Sources */,
+				1A98DF3C2816B5C900AB4E9B /* AlarmTableViewCell.swift in Sources */,
 				1A611452280D56C700AEEC3C /* SceneDelegate.swift in Sources */,
 				1AE50839280D730A00B82143 /* StopWatchViewController.swift in Sources */,
 				1AE50835280D72F100B82143 /* WorldClockViewController.swift in Sources */,

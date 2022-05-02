@@ -81,14 +81,15 @@ class StopWatchViewController: UIViewController {
         
         self.isCounting = true
         
-        changeButton(button: lapResetButton, title: "랩", titleColor: .white, backgroundColor: .darkGray)
-        changeButton(button: playPauseButton, title: "중단", titleColor: .white, backgroundColor: .red)
+        changeButton(button: lapResetButton, title: "랩", titleColor: .gray, backgroundColor: .darkGray)
+        changeButton(button: playPauseButton, title: "중단", titleColor: .red, backgroundColor: .red)
     }
     
     private func changeButton(button: UIButton, title:String, titleColor : UIColor , backgroundColor : UIColor) {
         button.setTitle(title, for: .normal)
         button.setTitleColor(titleColor, for:.normal)
         button.backgroundColor = backgroundColor
+        button.alpha = 0.2
     }
     @objc func updateMainTimer() {
         updateTimer(mainStopwatch, label: labTimerLabel)
@@ -101,8 +102,8 @@ class StopWatchViewController: UIViewController {
     private func initalizeButtons() {
         lapResetButton.isEnabled = false
         
-        changeButton(button: lapResetButton, title: "재설정", titleColor: .white, backgroundColor: .darkGray)
-        changeButton(button: playPauseButton, title: "시작", titleColor: .white, backgroundColor: .green)
+        changeButton(button: lapResetButton, title: "재설정", titleColor: .gray, backgroundColor: .darkGray)
+        changeButton(button: playPauseButton, title: "시작", titleColor: .systemGreen, backgroundColor: .green)
         
         resetTimer(stopWatch: mainStopwatch, label: labTimerLabel)
         
