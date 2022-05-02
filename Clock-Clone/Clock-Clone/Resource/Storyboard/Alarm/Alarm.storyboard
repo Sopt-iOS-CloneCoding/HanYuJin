@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BDK-6L-VyK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alarm View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AlarmViewController" id="Y6W-OH-hqX" customClass="AlarmViewController" customModule="Clock_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p32-iU-auV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="알람" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymB-yL-6Rr">
+                                        <rect key="frame" x="10" y="10" width="52" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bed.double.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X7M-Eo-UaL">
+                                        <rect key="frame" x="10" y="55.5" width="35" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="수면 | 기상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vns-X9-6rQ">
+                                        <rect key="frame" x="53" y="58" width="84" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ODp-Ak-WNL">
+                                        <rect key="frame" x="0.0" y="192" width="414" height="533"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ODp-Ak-WNL" firstAttribute="top" secondItem="vns-X9-6rQ" secondAttribute="bottom" constant="100" id="IlG-Ly-dFn"/>
+                                    <constraint firstItem="ODp-Ak-WNL" firstAttribute="centerX" secondItem="p32-iU-auV" secondAttribute="centerX" id="K9D-Pj-aPw"/>
+                                    <constraint firstAttribute="bottom" secondItem="ODp-Ak-WNL" secondAttribute="bottom" id="QFO-Lg-Xdq"/>
+                                    <constraint firstItem="ODp-Ak-WNL" firstAttribute="leading" secondItem="p32-iU-auV" secondAttribute="leading" id="SlV-GC-Z9W"/>
+                                    <constraint firstItem="ODp-Ak-WNL" firstAttribute="centerY" secondItem="p32-iU-auV" secondAttribute="centerY" id="boV-oZ-a0a"/>
+                                    <constraint firstAttribute="trailing" secondItem="ODp-Ak-WNL" secondAttribute="trailing" id="hgQ-2P-ztq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p32-iU-auV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1Rt-oA-oDT"/>
+                            <constraint firstItem="p32-iU-auV" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Z2D-ml-HkZ"/>
+                            <constraint firstItem="p32-iU-auV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bud-bl-X8v"/>
+                            <constraint firstItem="p32-iU-auV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ipX-cE-eOY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VYV-Sl-dAL"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="103.79464285714285"/>
+        </scene>
+        <!--알람-->
+        <scene sceneID="M9G-Dk-L7t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BDK-6L-VyK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="알람" image="alarm.fill" catalog="system" id="nYU-aG-dgE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ido-Cg-DOb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="5r0-8K-lbA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECA-QX-rre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
+        <image name="bed.double.fill" catalog="system" width="128" height="82"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

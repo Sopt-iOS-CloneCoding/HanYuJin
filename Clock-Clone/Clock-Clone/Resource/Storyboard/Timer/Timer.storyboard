@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--타이머-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TimerViewController" id="Y6W-OH-hqX" customClass="TimerViewController" customModule="Clock_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEF-2f-myg">
+                                <rect key="frame" x="47" y="190" width="320" height="216"/>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Adb-Jk-n0h"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38u-Ly-fYM">
+                                <rect key="frame" x="37" y="428" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GmN-WC-SKV"/>
+                                    <constraint firstAttribute="width" constant="80" id="wqZ-pu-wts"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="랩"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9U2-2c-f8O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF8-tl-2e4">
+                                <rect key="frame" x="297" y="428" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="D7X-Rr-7mW"/>
+                                    <constraint firstAttribute="width" constant="80" id="lTM-TB-vX9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="랩"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iTy-z6-Avf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFh-EO-oee">
+                                <rect key="frame" x="154.5" y="270.5" width="105" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD7-B6-GCd">
+                                <rect key="frame" x="207" y="355.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AFh-EO-oee" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HTZ-jO-YDV"/>
+                            <constraint firstItem="tEF-2f-myg" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-150" id="KMU-xK-gsl"/>
+                            <constraint firstItem="yD7-B6-GCd" firstAttribute="centerX" secondItem="AFh-EO-oee" secondAttribute="centerX" id="TPl-pf-eCJ"/>
+                            <constraint firstItem="38u-Ly-fYM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-130" id="ZHh-rt-Fbf"/>
+                            <constraint firstItem="uF8-tl-2e4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="130" id="dDG-IV-DvB"/>
+                            <constraint firstItem="uF8-tl-2e4" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="20" id="fKg-mu-kMo"/>
+                            <constraint firstItem="yD7-B6-GCd" firstAttribute="top" secondItem="AFh-EO-oee" secondAttribute="bottom" constant="30" id="gJO-b9-HVw"/>
+                            <constraint firstItem="tEF-2f-myg" firstAttribute="centerX" secondItem="AFh-EO-oee" secondAttribute="centerX" id="gK0-tp-Whq"/>
+                            <constraint firstItem="AFh-EO-oee" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-150" id="sVX-4m-xJW"/>
+                            <constraint firstItem="tEF-2f-myg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xVo-tI-z0F"/>
+                            <constraint firstItem="38u-Ly-fYM" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="20" id="yBV-Ci-lIU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="타이머" image="timer" catalog="system" id="vwx-I7-xJ2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="alarmTime" destination="yD7-B6-GCd" id="Ymx-T1-PTA"/>
+                        <outlet property="cancelButton" destination="38u-Ly-fYM" id="8OJ-7X-mid"/>
+                        <outlet property="datePicker" destination="tEF-2f-myg" id="bTg-lK-2mG"/>
+                        <outlet property="startButton" destination="uF8-tl-2e4" id="OmY-13-TJC"/>
+                        <outlet property="timeLabel" destination="AFh-EO-oee" id="8Bd-ln-ZCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
